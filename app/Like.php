@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Like extends Model
 {
     public function post(){
-        retrun $this->belongsTo(Post::class);
+        return $this->belongsTo(Post::class);
     }
 
     public function user(){
