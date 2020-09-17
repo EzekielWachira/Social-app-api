@@ -18,3 +18,23 @@ Route::post('/post', 'PostController@store')->name('post.store')->middleware('au
 Route::patch('/post/{post}', 'PostController@update')->name('post.update')->middleware('auth:sanctum');
 Route::get('/post/{post}', 'PostController@show')->name('post.show')->middleware('auth:sanctum');
 Route::delete('/post/{post}', 'PostController@delete')->name('post.delete')->middleware('auth:sanctum');
+
+//COMMENTS
+Route::post('/comment/{post}', 'CommentController@store')->name('comment.store')
+    ->middleware('auth:sanctum');
+Route::get('/comment/{comment}', 'CommentController@show')->name('comment.show')
+    ->middleware('auth:sanctum');
+Route::get('/comments', 'CommentController@index')->name('comment.index')
+    ->middleware('auth:sanctum');
+Route::patch('/comment/{comment}', 'CommentController@update')->name('comment.update')
+    ->middleware('auth:sanctum');
+Route::delete('/comment/{comment}', 'CommentController@delete')->name('comment.delete')
+    ->middleware('auth:sanctum');
+
+//POSTS
+Route::post('/like/{post}', 'LikeController@store')->name('like.store')
+    ->middleware('auth:sanctum');
+Route::get('/likes', 'LikeController@index')->name('like.show')
+    ->middleware('auth:sanctum');
+Route::delete('/like/{like}', 'LikeController@delete')->name('like.delete')
+    ->middleware('auth:sanctum');
