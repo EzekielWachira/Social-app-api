@@ -75,8 +75,14 @@ class PostController extends Controller
         return new PostResource($post);
     }
 
-    public function delete(Post $post){
-        $post->delete();
-        return new PostResource($post);
+    public function delete($id){
+//        $post->delete();
+//        return new PostResource($post);
+        Post::where('id', $id)->with('user', 'comments.user', 'likes.user')->first()->delete();
+//        $post->delete();
+        return response([
+            'message' => 'post was deleted'
+        ]);
+
     }
 }
