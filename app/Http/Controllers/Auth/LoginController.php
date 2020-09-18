@@ -23,10 +23,19 @@ class LoginController extends Controller
                 'credentials' => 'The provided credentials do not match with our records'
             ]);
         }
-        return $user->createToken('Auth Token')->plainTextToken;
+
+//        $token =
+
+//        return response([
+//            'token' => $token
+//        ]);
+        return $user->createToken('Auth Token')->plainTextToken;;
     }
 
     public function logout(Request $request){
-        $request->tokens()->delete();
+        $request->user()->tokens()->delete();
+        return response([
+            'message' => 'You Successfully logged out'
+        ]);
     }
 }
