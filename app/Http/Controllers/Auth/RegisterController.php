@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\WelcomeMail;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -16,14 +18,17 @@ class RegisterController extends Controller
             'password' => 'required|confirmed|min:6'
         ]);
 
-        User::create([
+        $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
 
+        Mail::to($request->email)->send(new WelcomeMail($user));
+
         return response([
             'message' => 'User Account Created'
         ]);
+
     }
 }

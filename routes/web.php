@@ -1,6 +1,9 @@
 <?php
 
+use App\Mail\WelcomeMail;
+use App\User;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/email', function () {
+//    $user = User::findOrFail(1)->first();
+    return new WelcomeMail();
 });
