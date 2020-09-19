@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\WelcomeMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -11,6 +12,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/register', 'Auth\RegisterController@register')->name('auth.register');
 Route::post('/login', 'Auth\LoginController@login')->name('auth.login');
 Route::post('/logout', 'Auth\LoginController@logout')->middleware('auth:sanctum')->name('auth.logout');
+
+//EMAIL
+Route::get('/email', function () {
+    return new WelcomeMail();
+});
 
 //POSTS
 Route::get('/posts', 'PostController@index')->name('post.index')->middleware('auth:sanctum');

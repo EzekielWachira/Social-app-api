@@ -30,8 +30,11 @@ class PostController extends Controller
         if ($request->hasFile('image')) {
             $post->image = time().'_'.$request->file('image')->getClientOriginalName();
 //            Storage::putFile('images', $request->file('image'), 'public');
-            Storage::putFileAs('images', $request->file('image'),
-                time()."_".$request->file('image')->getClientOriginalName(), 'public');
+//            Storage::putFileAs('images', $request->file('image'),
+//                time()."_".$request->file('image')->getClientOriginalName(), 'public');
+            $request->file('image')->storeAs('images',
+                time()."_".$request->file('image')->getClientOriginalName(),
+                'public');
         }
 
         $post->save();
@@ -62,8 +65,14 @@ class PostController extends Controller
             $data = [
                 'title' => $request->title,
                 'body' => $request->body,
-                'image' => $request->file('image')->getClientOriginalName()
+                'image' => time()."_".$request->file('image')->getClientOriginalName()
             ];
+//            Storage::putFileAs('images', $request->file('image'),
+//                time()."_".$request->file('image')->getClientOriginalName(), 'public');
+            $request->file('image')->storeAs('images', time()."_".$request->file('image')->getClientOriginalName(),
+                'public');
+            Storage::delete('/public/images/'.$post->image);
+
         }else{
             $data = [
                 'title' => $request->title,
@@ -75,10 +84,10 @@ class PostController extends Controller
         return new PostResource($post);
     }
 
-    public function delete($id){
-//        $post->delete();
+    public function delete(Post $post){
+        $post->delete();
 //        return new PostResource($post);
-        Post::where('id', $id)->with('user', 'comments.user', 'likes.user')->first()->delete();
+//        Post::where('id', $id)->with('user', 'comments.user', 'likes.user')->first()->delete();
 //        $post->delete();
         return response([
             'message' => 'post was deleted'
