@@ -1,7 +1,6 @@
 @component('mail::message')
     <div class="mail">
-        <h2>Hello developer</h2>
-{{--{{$user->name}},--}}
+        <h2>Hello developer {{$user->name}},</h2>
 {{--{{ auth()->user()->name  }}--}}
 
 <p>Welcome to our application</p>
@@ -24,9 +23,8 @@ Thanks,<br>
       background-color: #020521;
       color: #ffffff;
   }
-  
-  .button-primary{
 
+  .button-primary{
       color: white;
   }
 

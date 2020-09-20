@@ -17,13 +17,13 @@ class WelcomeMail extends Mailable
      *
      * @return void
      */
-//    public function __construct($user)
-//    {
-//        $this->user = $user;
-//    }
-    public function __construct(){
-        
+    public function __construct($user)
+    {
+        $this->user = $user;
     }
+//    public function __construct(){
+//
+//    }
 
     /**
      * Build the message.
@@ -32,6 +32,6 @@ class WelcomeMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.welcome')->with('user', $this->user);
+        return $this->markdown('emails.welcome')->with('user', $this->user)->from('developer@web.com');
     }
 }
