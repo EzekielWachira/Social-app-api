@@ -14,9 +14,9 @@ Route::post('/login', 'Auth\LoginController@login')->name('auth.login');
 Route::post('/logout', 'Auth\LoginController@logout')->middleware('auth:sanctum')->name('auth.logout');
 
 //EMAIL
-Route::get('/email', function () {
-    return new WelcomeMail();
-});
+//Route::get('/email', function () {
+//    return new WelcomeMail();
+//});
 
 //POSTS
 Route::get('/posts', 'PostController@index')->name('post.index')->middleware('auth:sanctum');

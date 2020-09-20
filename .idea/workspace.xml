@@ -27,15 +27,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f94431d8-7e78-444d-a5c3-cd0d6bcaf877" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Mail/WelcomeMail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/emails/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_11_190542_create_likes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_11_190542_create_likes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_11_192556_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_11_192556_create_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/WelcomeMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/WelcomeMail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emails/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,6 +201,7 @@
       <workItem from="1600280948072" duration="6550000" />
       <workItem from="1600440231606" duration="6035000" />
       <workItem from="1600493936740" duration="11152000" />
+      <workItem from="1600592678748" duration="1785000" />
     </task>
     <servers />
   </component>
