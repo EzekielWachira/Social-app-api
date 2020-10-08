@@ -27,10 +27,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f94431d8-7e78-444d-a5c3-cd0d6bcaf877" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Event.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/EventsResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_08_115317_create_events_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mail/WelcomeMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/WelcomeMail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/emails/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/PostResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/PostResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_11_181605_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_11_181605_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_11_192556_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_11_192556_create_comments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +209,9 @@
       <workItem from="1600280948072" duration="6550000" />
       <workItem from="1600440231606" duration="6035000" />
       <workItem from="1600493936740" duration="11152000" />
-      <workItem from="1600592678748" duration="1785000" />
+      <workItem from="1600592678748" duration="4314000" />
+      <workItem from="1601639355499" duration="2137000" />
+      <workItem from="1602157881563" duration="6059000" />
     </task>
     <servers />
   </component>
@@ -241,6 +251,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="488" y="99" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1600502350222" />
+    <state x="417" y="119" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602159580230">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="417" y="119" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1602159580230" />
     <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1600450959841">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -253,9 +267,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="339" y="172" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1599976332429" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1600502002855">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1602159244681">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1600502002855" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1602159244681" />
   </component>
 </project>

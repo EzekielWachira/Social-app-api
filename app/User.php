@@ -49,4 +49,9 @@ class User extends Authenticatable
     public function comment(){
         return $this->hasMany(Comment::class);
     }
+
+    public function event()
+    {
+        return $this->hasMany(Event::class, 'creator_id', 'id');
+    }
 }

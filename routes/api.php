@@ -44,3 +44,10 @@ Route::get('/likes', 'LikeController@index')->name('like.show')
     ->middleware('auth:sanctum');
 Route::delete('/like/{like}', 'LikeController@delete')->name('like.delete')
     ->middleware('auth:sanctum');
+
+//EVENTS
+Route::get('/events', 'EventsController@index')->middleware('auth:sanctum');
+Route::get('/event/{id}', 'EventsController@show')->middleware('auth:sanctum');
+Route::post('/event', 'EventsController@store')->middleware('auth:sanctum');
+Route::patch('/event/{id}', 'EventsController@update')->middleware('auth:sanctum');
+Route::delete('/event/{id}', 'EventsController@delete')->middleware('auth:sanctum');
