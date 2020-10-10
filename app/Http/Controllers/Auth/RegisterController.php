@@ -24,7 +24,7 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password)
         ]);
 
-        Mail::to("ezzy@me.com")->send(new WelcomeMail($user));
+//        Mail::to("ezzy@me.com")->send(new WelcomeMail($user));
 
         return response([
             'message' => 'User Account Created'

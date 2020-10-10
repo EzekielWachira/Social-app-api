@@ -29,7 +29,7 @@ class LoginController extends Controller
 //        return response([
 //            'token' => $token
 //        ]);
-        return $user->createToken('Auth Token')->plainTextToken;;
+        return $user->createToken('Auth Token')->plainTextToken;
     }
 
     public function logout(Request $request){
